@@ -3,14 +3,14 @@
 # Если фирма отработала с прибылью, вычислите рентабельность выручки (соотношение прибыли к выручке).
 # Далее запросите численность сотрудников фирмы и определите прибыль фирмы в расчете на одного сотрудника.
 def get_num(param):
-    err = True
-    while err:
-        print(f'{param} (введите положительное число): ', end='')
-        try:
-            n = float(input())
-            if n >= 0: return n
-        except ValueError:
-            err = True
+    print(f'{param} (введите положительное число): ', end='')
+    try:
+        return float(input())
+    except ValueError:
+        n = -1
+    if n >= 0: return n
+    return get_num(param)
+
 
 revenue = get_num('Выручка')
 costs = get_num('Издержки')
