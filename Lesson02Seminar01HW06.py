@@ -10,5 +10,5 @@ def get_sec():
     return get_sec()
 
 
-n = get_sec()
-print('%(h)02d:%(m)02d:%(s)02d'%{'h': n // 60 ** 2, 'm': n // 60 % 60, 's': n % 60})
+num = get_sec()
+print('%(h)02d:%(m)02d:%(s)02d' % {'h': num // 60 ** 2, 'm': num // 60 % 60, 's': num % 60})

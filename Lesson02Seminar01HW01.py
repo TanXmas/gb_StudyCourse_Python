@@ -10,9 +10,9 @@ def get_num():
     return get_num()
 
 
-n = get_num()
+num = get_num()
 
-if 1 <= n <= 5:
+if 1 <= num <= 5:
     print('нет')
-elif 6 <= n <= 7:
+elif 6 <= num <= 7:
     print('да')

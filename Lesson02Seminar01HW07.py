@@ -1,4 +1,4 @@
-# Узнайте у пользователя число n. Найдите сумму чисел n + nn + nnn.
+# Узнайте у пользователя число num. Найдите сумму чисел num + nn + nnn.
 def get_num():
     print(f'Введите натуральное число: ', end='')
     try:
@@ -10,5 +10,5 @@ def get_num():
     return get_num()
 
 
-n = get_num()
-print(n, ' + ', n*2, ' + ', n*3, ' = ', int(n) + int(n * 2) + int(n * 3), sep='')
+num = get_num()
+print(num, ' + ', num * 2, ' + ', num * 3, ' = ', int(num) + int(num * 2) + int(num * 3), sep='')

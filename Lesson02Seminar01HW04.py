@@ -10,13 +10,13 @@ def get_num():
     return get_num()
 
 
-n = get_num()
+num = get_num()
 
-if n == 1:
+if num == 1:
     print('x > 0, y > 0')
-elif n == 2:
+elif num == 2:
     print('x < 0, y > 0')
-elif n == 3:
+elif num == 3:
     print('x < 0, y < 0')
 else:
     print('x > 0, y < 0')

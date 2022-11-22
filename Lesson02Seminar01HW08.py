@@ -11,13 +11,13 @@ def get_num():
     return get_num()
 
 
-n = get_num()
-print(f'Самая большая цифра в числе {n} = ', end='')
+num = get_num()
+print(f'Самая большая цифра в числе {num} = ', end='')
 
 max_num = -1
-while n > 0:
-    if n % 10 > max_num:
-        max_num = n % 10
-    n //= 10
+while num > 0:
+    if num % 10 > max_num:
+        max_num = num % 10
+    num //= 10
 
 print(max_num)
