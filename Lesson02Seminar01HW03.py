@@ -6,11 +6,13 @@ def get_point(axis):
         n = float(input())
     except ValueError:
         n = 0
-    if n != 0: return n
+    if n != 0:
+        return n
     return get_point(axis)
 
 
 x, y = get_point('x'), get_point('y')
+
 if x > 0 and y > 0:
     print(f'Точка ({x}, {y}) находится в 1й координатной плоскости')
 elif y < 0 < x:

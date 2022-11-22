@@ -5,11 +5,13 @@ def get_num():
         n = int(input())
     except ValueError:
         n = 0
-    if 1 <= n <= 7: return n
+    if 1 <= n <= 7:
+        return n
     return get_num()
 
 
 n = get_num()
+
 if 1 <= n <= 5:
     print('нет')
 elif 6 <= n <= 7:

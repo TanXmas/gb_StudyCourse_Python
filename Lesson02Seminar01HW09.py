@@ -8,12 +8,14 @@ def get_num(param):
         return float(input())
     except ValueError:
         n = -1
-    if n >= 0: return n
+    if n >= 0:
+        return n
     return get_num(param)
 
 
 revenue = get_num('Выручка')
 costs = get_num('Издержки')
+
 if revenue == costs:
     print('Фирма работает в 0')
 elif revenue < costs:
@@ -22,6 +24,7 @@ else:
     print(f'Фирма работает с прибылью {revenue-costs}')
     rent = (revenue-costs) / revenue
     print(f'Рентабельность выручки = {rent:.2f}')
+
     employees = get_num('Численность сотрудников фирмы')
     ppoe = (revenue-costs) / employees
     print(f'Прибыль на одного сотрудника = {ppoe:.2f}')

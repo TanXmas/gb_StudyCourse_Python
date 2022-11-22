@@ -8,7 +8,8 @@ def get_num(param):
         n = float(input())
     except ValueError:
         n = 0
-    if n > 0: return n
+    if n > 0:
+        return n
     return get_num(param)
 
 

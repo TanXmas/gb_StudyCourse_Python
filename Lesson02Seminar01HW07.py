@@ -5,7 +5,8 @@ def get_num():
         n = int(input())
     except ValueError:
         n = 0
-    if n > 0: return str(n)
+    if n > 0:
+        return str(n)
     return get_num()
 
 

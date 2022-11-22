@@ -5,7 +5,8 @@ def get_sec():
         n = int(input())
     except ValueError:
         n = -1
-    if n >= 0: return int(n)
+    if n >= 0:
+        return int(n)
     return get_sec()
 
 

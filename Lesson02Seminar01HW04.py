@@ -5,11 +5,13 @@ def get_num():
         n = int(input())
     except ValueError:
         n = 0
-    if 1 <= n <= 4: return n
+    if 1 <= n <= 4:
+        return n
     return get_num()
 
 
 n = get_num()
+
 if n == 1:
     print('x > 0, y > 0')
 elif n == 2:

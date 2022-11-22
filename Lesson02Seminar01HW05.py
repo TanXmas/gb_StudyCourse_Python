@@ -13,4 +13,5 @@ def get_point(axis):
 
 x1, y1 = get_point('x1'), get_point('y1')
 x2, y2 = get_point('x2'), get_point('y2')
+
 print(f'Расстояние между точками ({x1}, {y1}) и ({x2}, {y2}) = {((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5:.02f}')
