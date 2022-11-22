@@ -2,14 +2,14 @@
 # Каждый день спортсмен увеличивал результат на 10 % относительно предыдущего.
 # Требуется определить номер дня, на который результат спортсмена составит не менее b километров.
 # Программа должна принимать значения параметров a и b и выводить одно натуральное число — номер дня.
-def get_num(param, n=0):
-    while not n:
-        print(f'{param} (введите положительное число): ', end='')
-        try:
-            n = float(input())
-            if n > 0: return n
-        except ValueError:
-            n = 0
+def get_num(param):
+    print(f'{param} (введите положительное число): ', end='')
+    try:
+        n = float(input())
+    except ValueError:
+        n = 0
+    if n > 0: return n
+    return get_num(param)
 
 
 a = get_num('Километров в 1й день')
