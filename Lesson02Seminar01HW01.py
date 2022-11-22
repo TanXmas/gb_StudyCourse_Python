@@ -11,8 +11,6 @@ def get_num():
 
 n = get_num()
 if 1 <= n <= 5:
-    ans = True
     print('нет')
 elif 6 <= n <= 7:
-    ans = True
     print('да')
