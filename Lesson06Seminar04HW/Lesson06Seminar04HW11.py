@@ -23,10 +23,10 @@ def get_polynom(n, coef):
 
 out_file = open('11_output.txt', 'a', encoding='utf8')
 
-n = randint(2, 5)
+n = randint(1, 6)
 print(n)
 
-coeff = [randint(0, 10) for _ in range(n + 1)]
+coeff = [randint(0, 100) for _ in range(n + 1)]
 print(coeff)
 
 #print(' + '.join(get_polynom(n, coeff)), '= 0')

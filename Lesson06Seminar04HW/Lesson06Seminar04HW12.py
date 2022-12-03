@@ -1,5 +1,6 @@
 # Даны два файла, в каждом из которых находится запись многочлена.
 # Задача - сформировать файл, содержащий сумму многочленов.
+# список коэффициентов (значения от 0 до 100) ???
 def get_polynom(n, coef):
     lst = ['' for k in coef if k > 0]
     j = 0
@@ -21,13 +22,19 @@ def get_coeff_sum(polynoms):
     poly_dic = {}
     for polynom in polynoms:
         for e in polynom:
-            if e.find('^') > -1:
-                p = int(e[-1])
-            elif e.find('x') > -1:
-                p = 1
+            if e.find('x') > -1:
+                if e.find('^') > -1:
+                    p = int(e[e.find('^') + 1:])
+                else:
+                    p = 1
+                if e.find('*') > -1:
+                    k = int(e[:e.find('*')])
+                else:
+                    k = 1
             else:
                 p = 0
-            poly_dic[p] = poly_dic.get(p, []) + [int(e[0])]
+                k = int(e)
+            poly_dic[p] = poly_dic.get(p, []) + [k]
     n = max(poly_dic.keys())
     return n, [sum(poly_dic.get(i, [0])) for i in range(n, -1, -1)]
 
