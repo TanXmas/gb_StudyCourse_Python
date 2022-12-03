@@ -21,7 +21,7 @@ lst = [v for v in range(n)]
 print(lst)
 c = 0
 for v in cycle(lst):
-    if c > n*2+n//2:
+    if c > n * 2 + n // 2:
         break
     print(v, end=' ')
     c += 1
