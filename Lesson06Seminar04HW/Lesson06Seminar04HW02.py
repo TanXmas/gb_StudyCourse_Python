@@ -8,4 +8,6 @@ n = randint(2, 20)
 lst = [randint(0, 500) for _ in range(n)]
 print(lst)
 
-[print(lst[i], end=' ') for i in range(1, n) if lst[i] > lst[i - 1]]
+#print(*[lst[i] for i in range(1, n) if lst[i] > lst[i - 1]])
+res = [lst[i] for i in range(1, n) if lst[i] > lst[i - 1]]
+print(*res)

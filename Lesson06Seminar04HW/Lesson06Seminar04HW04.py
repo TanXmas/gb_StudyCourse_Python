@@ -9,4 +9,6 @@ n = randint(5, 15)
 lst = [randint(0, 10) for _ in range(n)]
 print(lst)
 
-[print(v, end=' ') for v in lst if lst.count(v) == 1]
+#print([v for v in lst if lst.count(v) == 1])
+res = [v for v in lst if lst.count(v) == 1]
+print(res)

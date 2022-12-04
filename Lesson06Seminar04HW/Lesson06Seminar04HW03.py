@@ -2,4 +2,7 @@
 # Подсказка: использовать функцию range() и генератор.
 
 # в пределах от 20 до 240 - включая границы ???
-[print(n, end=' ') for n in range(20, 241) if not n % 20 or not n % 21]
+#print(*[n for n in range(20, 241) if not n % 20 or not n % 21])
+res = [n for n in range(20, 241) if not n % 20 or not n % 21]
+print(*res)
+
