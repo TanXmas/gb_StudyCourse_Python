@@ -3,4 +3,4 @@
 # Строки необходимо пронумеровать.
 # Если в слово длинное, выводить только первые 10 букв в слове.
 
-[print(f'{i}: {w[:10]}') for i, w in enumerate(input().split())]
+[print(f'{i}: {w[:10]}') for i, w in enumerate(input().split(), 1)]
