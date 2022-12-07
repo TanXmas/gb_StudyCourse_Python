@@ -10,4 +10,4 @@ print(lst)
 
 #print(*[lst[i] for i in range(1, n) if lst[i] > lst[i - 1]])
 res = [lst[i] for i in range(1, n) if lst[i] > lst[i - 1]]
-print(*res)
+print(res)
