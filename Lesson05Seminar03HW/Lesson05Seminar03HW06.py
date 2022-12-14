@@ -17,4 +17,4 @@ def int_func(word):
 
 
 words = input().split()
-[print(int_func(w), end=' ') for w in words]
+print(*[int_func(w) for w in words])

@@ -8,6 +8,7 @@
 from random import randint
 from itertools import count, cycle
 
+
 n = randint(1, 5)
 print(n)
 
@@ -16,6 +17,7 @@ for num in count(n):
         break
     print(num, end=' ')
 print('\n')
+
 
 lst = [v for v in range(n)]
 print(lst)
