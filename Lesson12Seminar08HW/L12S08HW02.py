@@ -51,9 +51,9 @@ class Cell:
 c1 = Cell(randint(1, 10))
 c2 = Cell(randint(1, 10))
 
-print(f"cell1 = {c1.quantity}, cell2 = {c2.quantity}")
+print(f"cell1 = {c1}, cell2 = {c2}")
 
-print(f"Sum for cell = {c1 + c2}")
+print(f"Sum for cells = {c1 + c2}")
 
 try:
     print(f"Sub for cells = {c1 - c2}")
