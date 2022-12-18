@@ -23,12 +23,12 @@ class Matrix(list):
         return Matrix([[self.list_out[i][j] + other.list_out[i][j] for j in range(size_j)] for i in range(size_i)])
 
 
-size_i, size_j = randint(3, 3), randint(3, 3)
+size_i, size_j = randint(2, 9), randint(2, 9)
 lst1 = [[randint(0, 9) for _ in range(size_j)] for _ in range(size_i)]
-print('\n'.join(['\t'.join(map(str, line)) for line in lst1]), '\n')
 lst2 = [[randint(0, 9) for _ in range(size_j)] for _ in range(size_i)]
-print('\n'.join(['\t'.join(map(str, line)) for line in lst2]), '\n')
 
 m1 = Matrix(lst1)
+print(m1, '\n')
 m2 = Matrix(lst2)
+print(m2, '\n')
 print(m1 + m2)

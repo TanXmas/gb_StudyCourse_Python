@@ -16,6 +16,6 @@ def div(x, y):
 
 x, y = int(input('Enter dividend: ')), int(input('Enter divisor: '))
 try:
-    print(div(x,y))
+    print(div(x, y))
 except ZeroDivError as zde:
     print(f'Division by zero: x = {zde.x}, y = {zde.y}.')
