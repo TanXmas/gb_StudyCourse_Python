@@ -51,4 +51,4 @@ class TestFunctions(TestCase):
         self.assertAlmostEqual(div(1, 3), 0.333, 3)
 
     def test_div2(self):
-        self.assertRaises(ZeroDivError, div, randint(-100, 100), 0)
+        self.assertRaises(ZeroDivError, div, self.rand, 0)
