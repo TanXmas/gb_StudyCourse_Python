@@ -8,14 +8,14 @@ class ZeroDivError(Exception):
 
 
 def div(x, y):
-    try:
-        if y == 0:
-            raise ZeroDivError(x, y)
-    except ZeroDivError as zde:
-        return f'Error division by zero: x = {zde.x}, y = {zde.y}.'
-    else:
-        return x / y
+    return x / y
 
 
 x, y = int(input('Enter dividend: ')), int(input('Enter divisor: '))
-print(div(x, y))
+try:
+    if y == 0:
+        raise ZeroDivError(x, y)
+except ZeroDivError as zde:
+    print(f'Error division by zero: x = {zde.x}, y = {zde.y}.')
+else:
+    print(div(x, y))
