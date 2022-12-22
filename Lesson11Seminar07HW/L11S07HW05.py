@@ -11,23 +11,34 @@ class Stationery:
 
 
 class Pen(Stationery):
+    def __init__(self, title):
+        super().__init__(title)
+
     def draw(self):
         print(f'Start a {self.title} drawing.')
 
 
 class Pencil(Stationery):
+    def __init__(self, title):
+        super().__init__(title)
+
     def draw(self):
         print(f'Start a {self.title} drawing.')
 
 
 class Handle(Stationery):
+    def __init__(self, title):
+        super().__init__(title)
+
     def draw(self):
         print(f'Start a {self.title} drawing.')
 
 
 pen = Pen('pen')
 pen.draw()
+
 pencil = Pencil('pencil')
 pencil.draw()
+
 handle = Handle('handle')
 handle.draw()

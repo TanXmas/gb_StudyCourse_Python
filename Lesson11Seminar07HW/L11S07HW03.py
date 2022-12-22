@@ -14,11 +14,20 @@ class Worker:
 
 
 class Position(Worker):
+    def __init__(self, name, surname, position, wage, bonus):
+        super().__init__(name, surname, position, wage, bonus)
+
     def get_full_name(self):
-        print(f'Employee name is: {self.name} {self.surname}')
+        # print(f'Employee name is: {self.name} {self.surname}')
+        return f'{self.name} {self.surname}'
+
 
     def get_total_income(self):
-        print(f'Employee salary is: {sum(self._income.values())}')
+        return sum(self._income.values())
+        #print(f'Employee salary is: {sum(self._income.values())}')
+
+    def __str__(self):
+        return f"Name: {self.get_full_name()}\nSalary: {self.get_total_income()}"
 
 
 wage = randint(50, 150)
@@ -27,5 +36,6 @@ bonus = randint(wage//4, wage//2)
 
 ak = Position('Kevin', 'Brown', 'Agent', wage*1000, bonus*1000)
 print(ak.position, ak.name, ak.surname, ak._income)
-ak.get_full_name()
-ak.get_total_income()
+print(ak.get_full_name())
+print(ak.get_total_income())
+print(ak)

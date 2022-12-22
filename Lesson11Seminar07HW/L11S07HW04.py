@@ -16,16 +16,23 @@ class Car:
         self.is_police = is_police
 
     def go(self):
-        print(f'{self.color} {self.name} started moving.')
+        #print(f'{self.color} {self.name} started moving.')
+        return f'{self.color} {self.name} started moving.'
 
     def stop(self):
-        print(f'{self.color} {self.name} stopped.')
+        #print(f'{self.color} {self.name} stopped.')
+        return f'{self.color} {self.name} stopped.'
 
     def turn(self, direction):
-        print(f'{self.color} {self.name} turned {direction}.')
+        #print(f'{self.color} {self.name} turned {direction}.')
+        return f'{self.color} {self.name} turned {direction}.'
 
     def show_speed(self):
-        print(f'{self.color} {self.name} is going at a speed of {self.speed} km/h.')
+        #print(f'{self.color} {self.name} is going at a speed of {self.speed} km/h.')
+        return f'{self.color} {self.name} is going at a speed of {self.speed} km/h.'
+
+    def __str__(self):
+        return f'{self.name} {self.color} {self.speed} {self.is_police}'
 
 
 class TownCar(Car):
@@ -35,15 +42,23 @@ class TownCar(Car):
 
     def show_speed(self):
         if self.speed <= 60:
-            print(f'{self.color} {self.name} is going at a speed of {self.speed} km/h.')
+            #print(f'{self.color} {self.name} is going at a speed of {self.speed} km/h.')
+            return f'{self.color} {self.name} is going at a speed of {self.speed} km/h.'
         else:
-            print(f'{self.color} {self.name} exceeded the speed limit!')
+            #print(f'{self.color} {self.name} exceeded the speed limit!')
+            return f'{self.color} {self.name} exceeded the speed limit for town cars!'
 
 
 class SportCar(Car):
     def __init__(self, name, color, speed, is_police):
         super().__init__(name, color, speed, is_police)
-        self.is_police = False
+        #self.is_police = False
+
+    def sport(self):
+        if self.is_police:
+            return f'{self.color} {self.name} is police car now.'
+        else:
+            return f'{self.color} {self.name} is sport car.'
 
 
 class WorkCar(Car):
@@ -53,9 +68,11 @@ class WorkCar(Car):
 
     def show_speed(self):
         if self.speed <= 40:
-            print(f'{self.color} {self.name} is going at a speed of {self.speed} km/h.')
+            #print(f'{self.color} {self.name} is going at a speed of {self.speed} km/h.')
+            return f'{self.color} {self.name} is going at a speed of {self.speed} km/h.'
         else:
-            print(f'{self.color} {self.name} exceeded the speed limit!')
+            #print(f'{self.color} {self.name} exceeded the speed limit!')
+            return f'{self.color} {self.name} exceeded the speed limit for work cars!'
 
 
 class PoliceCar(Car):
@@ -69,20 +86,22 @@ sc = SportCar('Audi', 'Blue', randint(40, 150), False)
 wc = WorkCar('KAMAZ', 'Green', randint(15, 60), False)
 pc = PoliceCar('Kia', 'Grey', randint(30, 160), True)
 
-print(tc.name, tc.color, tc.speed, tc.is_police)
-print(sc.name, sc.color, sc.speed, sc.is_police)
-print(wc.name, wc.color, wc.speed, wc.is_police)
-print(pc.name, pc.color, pc.speed, pc.is_police)
-print()
+print(tc)
+print(sc)
+print(wc)
+print(pc, '\n')
 
-tc.go()
-tc.show_speed()
+print(tc.go())
+print(tc.show_speed(), '\n')
 
-sc.turn('left')
-sc.show_speed()
+print(sc.sport())
+sc.is_police = True
+print(sc.sport())
+print(sc.turn('left'))
+print(sc.show_speed(), '\n')
 
-wc.show_speed()
-wc.stop()
+print(wc.show_speed())
+print(wc.stop(), '\n')
 
-pc.go()
-pc.show_speed()
+print(pc.go())
+print(pc.show_speed())
